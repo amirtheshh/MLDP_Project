@@ -134,7 +134,8 @@ input_df = pd.DataFrame([input_data])
 
 st.markdown('<div class="center-button">', unsafe_allow_html=True)
 if st.button("💰 Predict Resale Price"):
-    prediction = model.predict(input_df)[0]
+    with st.spinner("Predicting resale price..."):
+        prediction = model.predict(input_df)[0]
     
     st.markdown(
         f"""
