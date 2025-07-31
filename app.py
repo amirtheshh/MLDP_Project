@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import joblib
 import shap
-import numpy as np
 import matplotlib.pyplot as plt
 import base64
+from sklearn.ensemble import HistGradientBoostingRegressor
 
 st.set_page_config(page_title="HDB Resale Price Predictor", layout="wide")
 
