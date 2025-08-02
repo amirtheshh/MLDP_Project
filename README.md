@@ -39,7 +39,7 @@ The objective was to create a machine learning model that can predict HDB resale
 - Removed low-importance or high-cardinality features
 
 ### 2. 🏗️ Feature Engineering
-- Derived `years_remaining` from month column
+- Derived `transaction_year` and `transaction_month` from month column
 - Created `storey_range_binned` from storey range column
 - Transformed `postal_code` to correct datatype
 
@@ -79,7 +79,7 @@ After comparing 12 models, **HistGradientBoosting** was chosen due to:
 
 A frontend was built using **Streamlit**, which allows users to:
 
-- Input housing attributes (flat type, town, floor area, etc.)
+- Input housing attributes (flat type, years_remaining, storey_range etc.)
 - Instantly view the predicted resale price
 - View input features
 - App uses SHAP to explain prediction logic
